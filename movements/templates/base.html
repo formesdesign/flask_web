@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Moviments - {% block title %}{% endblock %}</title>
+            <style>
+                * {
+                    font-family: 'Courier New', Courier, monospace;
+                }
+                header {
+                    color: blue;
+                    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+                }
+            </style>
+        </head>
+        <body>
+            <header>
+                <p>Practica web - LISTA</p>
+            </header>
+            <section>
+                {% block contenido %}{% endblock %}
+            </section>
+
+            <footer>
+                &copy; 2020 - 2021. Tots els drets reservats
+            </footer>
+        </body>
+    </html>
