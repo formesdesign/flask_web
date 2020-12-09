@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %} Despeses i gastos {% endblock %}
+
+{% block content %}
+
+    <form action="creaalta" method="post"> 
+        <div class="field">
+            <label for="data">Data: </label>
+            <input type="date" name="data" /><br>
+        </div>
+        <div class="field">
+            <label for="concepte">Concepte: </label>
+            <input type="text" name="concepte" /><br>
+        </div>
+        <div class="field">
+            <label for="import">Import: </label>
+            <input type="number" name="import" step="0.01" /><br>
+        </div>
+    </div>
+    <div class="field">
+            <input type="submit" value="Registrar" />
+    </form>
+
+{% endblock %}

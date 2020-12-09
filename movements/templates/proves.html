@@ -10,3 +10,32 @@
 
 
 <img src="static/baixa.jpg" alt="">
+
+
+<h1>Ingressos mensuals <a href="creaalta">Nou</a><link rel="stylesheet" href="localhost:5000/creaalta.html">
+    <button class="btn btn-success"><h1>+</h1></button></h1>
+
+    return render_template("creaalta.html", methods=["GET", "POST"])
+
+
+    {% extends "base.html" %}
+{% block title %}Nou registre{% endblock %}
+{% block content %}
+    <form action="creaalta" method="post"> 
+        <label for="data">Data: </label>
+        <input type="text" id="data" name="data" /><br>
+        <label for="concepte">Concepte: </label>
+        <input type="text" id="concepte" name="concepte" /><br>
+        <label for="import">Import: </label>
+        <input type="text" id="import" name="import" /><br>
+        <input type="submit" id="send-signup" name="signup" value="Registrar" />
+    </form>
+{% endblock %}
+
+
+
+"""
+@app.route("/creaalta") #un punt d'entrada
+def nouIngres(): 
+    return "demà més"
+"""
