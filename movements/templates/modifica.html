@@ -1,14 +1,14 @@
 {% extends "base.html" %}
 
-{% block title %} Registre nou {% endblock %}
+{% block title %} Modificar registre {% endblock %}
 
 {% block contenido %}
 
-    <form action="creaalta" method="post"> 
+    <form action="/modifica/{{id}}" method="post"> 
         {{ form.hidden_tag() }}
         <div class="field">
             {{ form.data.label }}
-            {{ form.data(type="date") }}
+            {{ form.data }}
             {% for error in form.data.errors %}
             <p class="err-msg">
                 {{ error }}
@@ -17,25 +17,26 @@
         </div>
         <div class="field">
             {{ form.concepte.label }}
-            {{ form.concepte(placeholder='Amb el que meu he gastat') }}
+            {{ form.concepte }}
             {% for error in form.concepte.errors %}
             <p class="err-msg">
                 {{ error }}
             </p>
-            {% endfor %}
+            {% endfor %}           
         </div>
         <div class="field">
             {{ form.quantitat.label }}
-            {{ form.quantitat (placeholder='Escriu un número') }}
+            {{ form.quantitat }}
             {% for error in form.quantitat.errors %}
             <p class="err-msg">
                 {{ error }}
             </p>
             {% endfor %}
         </div>
-        <div class="field">
+    </div>
+    <div class="field">
             {{ form.submit }}
-        </div>
+    </div>
 
     </form>
 

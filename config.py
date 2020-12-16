@@ -1,3 +1,4 @@
-DBHost=localhost
-DBPort=4567
-DBUser="movements_user"
+
+SECRET_KEY="123456789*&/%$"
+DBFILE="movements/data/basededades.db"
+
